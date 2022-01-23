@@ -1,0 +1,99 @@
+body {
+	background-image: linear-gradient(to right top, #24e8bc, #3de59d, #5de179, #7cdc50, #9ad418);
+	font-size: 1.3em;
+}
+
+.container {
+	background-color: #f0f0f5;
+	width: 40%;
+	height: 70%;
+	margin: auto;
+	position: relative;
+    top: 15%;
+}
+
+h3 {
+	text-align: center;
+    padding: 2.5vw 0 1vw 0;
+}
+
+input {
+	position: absolute;
+    right: 7%;
+    margin: 0;
+    width: 55%;
+}
+
+.error {
+	font-size: 14;
+    color: red;
+    margin: 4px 0;
+}
+
+.form-input-item {
+	margin: 20px 5px;
+}
+
+button {
+	display: block;
+    margin: 30px auto;
+    background-color: limegreen;
+    width: 16%;
+    height: 7%;
+    border: none;
+    border-radius: 60px;
+    color: #f0f0f5;
+}
+
+button:hover {
+	background-color: #f0f0f5;
+	color: limegreen;
+	border: 2px solid limegreen;
+	border-radius: 60px;	
+}
+
+div a {
+	font-size: 0.8em;
+    margin-left: 5px;
+    text-decoration: none;
+    color: limegreen;
+}
+
+div a:hover {
+	color: #4fe448;
+}
+
+hr {
+	margin: 5px 5px 20px 5px;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 60%;	
+	}
+	
+	input {
+    	right: 10%;
+    	width: 55%;
+	}
+	
+	body {
+		font-size: 1.1em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.container {
+		width: 90%;	
+	}
+	
+	input {
+    	right: 10%;
+    	width: 60%;
+	}
+	
+	body {
+		font-size: 1em;
+	}
+}
+

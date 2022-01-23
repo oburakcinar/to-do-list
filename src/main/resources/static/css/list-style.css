@@ -1,0 +1,181 @@
+body {
+	background-color: #f0f0f5;
+	padding-bottom: 40px;	
+}
+
+.container {
+	position: relative;
+	width: 80%;
+    margin: auto;
+}
+
+h3 {
+	font-size: 48px;
+    color: limegreen;
+    text-align: center;
+    margin-top: 0.8em; 
+    margin-bottom: 15px;
+}
+
+.search {
+	padding: 5.5px 0 4.4px 6px;
+    border: none;
+    margin-top: 15px;
+    margin-right: -5px;
+    font-size: 17px;
+}
+
+.search-button {
+	padding: 6px 10px;
+	background: #d7d7d7;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+i {
+    display: inline-block;
+    margin-right: 0.4vw;
+}
+
+i.fas.fa-edit {
+    font-size: 0.8em;
+}
+
+i.far.fa-trash-alt {
+    font-size: 0.8em;
+}
+
+table {
+	margin: 30px auto 0px;
+	border-bottom: 2px solid limegreen;
+	border-collapse: collapse;
+	font-size: 18px;
+}
+
+thead {
+	height: 1.5em;
+	text-align: left;
+	
+}
+
+th {
+	background-color: limegreen;
+	color: white;
+}
+
+th,td {
+	width: 15vw;
+	padding-left: 0.3em;
+}
+
+#table-top-left {
+	border-top-left-radius: 8px;
+}
+
+#table-top-right {
+	border-top-right-radius: 8px;
+}
+
+tr {
+	height: 4vw;
+}
+
+
+
+tr:nth-child(even) {
+	background-color: white;
+}
+
+tr:hover {
+	background-color: darkgray;
+}
+
+.long-cell {
+	width: 20vw;
+}
+
+.longer-cell {
+	width: 30vw;
+}
+
+.text-align {
+	text-align: center;
+}
+
+.button {
+	padding: 0.3vw 0.8vw;
+	background-color: yellow;
+	border-radius: 3px;	
+	font-size: 16px;
+	
+}
+
+.delete-button {
+	background-color: red;
+}
+
+.add-button {
+	background-color: limegreen;	
+}
+
+#add-task-button {
+	top: 15px;
+	left: 0;
+	padding: 7px 15px
+}
+
+#show-all-button {
+	top: 15px;
+	right: 0;
+	padding: 7px 15px;
+	float: right;
+    left: 0px;
+}
+
+.button:hover {
+	background-color: #feff88;
+}
+
+.delete-button:hover {
+	background-color: #ff674d;
+}
+
+.add-button:hover {
+	background-color: #4fe448;
+}
+
+a.button {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.add-button {
+    position: relative;
+    left: 11vw;
+    top: 1vw;
+}
+
+td a.button {
+	padding-right: 1.2vw;
+}
+
+
+@media only screen and (max-width: 982px) {
+  td a.button {
+  	margin: 2px 0px;
+  }
+  
+  td a.delete-button {
+  	margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  td i.fas, td i.far{
+  	display: none;
+  }   
+}
+
+

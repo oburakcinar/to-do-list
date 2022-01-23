@@ -1,0 +1,72 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+	<title>Task Form</title>
+	
+	<link rel="stylesheet" th:href="@{/css/form-style.css}">
+	
+	<!-- needed for adding Font Awesome 5 home icon -->
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+	<div class="container">
+	<h3>Task Form</h3>
+	
+	<form action="#" th:action="@{/tasks/save}" th:object="${task}" method="POST">
+		
+		<input type="hidden" th:field="*{id}">
+		
+		<div class="form-input-item">
+		<span>Title:</span> <input type="text" th:field="*{title}">
+		<p th:if="${#fields.hasErrors('title')}" class="error">Please enter a title!</p>
+		</div>
+		
+		<div class="form-input-item">
+		<span>Description:</span><input type="text" th:field="*{description}"> 
+		<p th:if="${#fields.hasErrors('description')}" class="error">Please enter a description!</p>
+		</div>
+		
+		<div class="form-input-item">
+		<span>Due Date:</span> <input type="date" th:field="*{dueDate}" id="dateControl" >
+		<p th:if="${#fields.hasErrors('dueDate')}" class="error">Please enter a date!</p>
+		</div>
+				
+		<button type="submit">Save</button>
+		
+	</form>
+	
+	<hr>
+	
+	<a th:href="@{/tasks/list}"><i class="fas fa-home"></i>Back to List</a>
+	
+	</div>
+	
+	<!-- script for restricting past dates in input date -->
+	<script>
+	$(document).ready(function(){
+		var dtToday = new Date();
+		var month = dtToday.getMonth() + 1;
+		var day = dtToday.getDate();
+		var year = dtToday.getFullYear();
+		
+		if(month < 10)
+			month = '0' + month.toString();
+		
+		if(day < 10)
+			day = '0' + day.toString(); 
+		
+		var maxDate = year + '-' + month + '-' + day;
+		
+		$('#dateControl').attr('min', maxDate);
+	})
+	</script>
+</body>
+
+</html>
